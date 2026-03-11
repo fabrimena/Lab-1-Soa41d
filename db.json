@@ -17,12 +17,6 @@
       "name": "Han Solo",
       "email": "han@rebels.com",
       "document": "11111"
-    },
-    {
-      "id": "d4fb",
-      "name": "Pepe Aguilar",
-      "email": "pepeaguilar@example.com",
-      "document": "912842"
     }
   ],
   "planets": [
@@ -34,6 +28,11 @@
     {
       "id": "2",
       "name": "Alderaan",
+      "galaxy": "Milky Way"
+    },
+    {
+      "id": "3",
+      "name": "Marte",
       "galaxy": "Milky Way"
     }
   ],
@@ -56,5 +55,6 @@
       "planetId": 2,
       "percentage": 100
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

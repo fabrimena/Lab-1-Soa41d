@@ -1,0 +1,110 @@
+openapi: 3.0.0
+info:
+  title: Galactic Territory Management API
+  description: API para gestionar la propiedad de planetas en la Via Lactea
+  version: 1.0.0
+
+servers:
+  - url: http://localhost:3000
+
+paths:
+
+  /users:
+    post:
+      summary: Crear usuario
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/User'
+      responses:
+        "201":
+          description: Usuario creado
+
+    get:
+      summary: Listar usuarios
+      responses:
+        "200":
+          description: Lista de usuarios
+
+  /planets:
+    post:
+      summary: Registrar planeta
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Planet'
+      responses:
+        "201":
+          description: Planeta registrado
+
+    get:
+      summary: Listar planetas
+      responses:
+        "200":
+          description: Lista de planetas
+
+  /ownership:
+    post:
+      summary: Asignar propiedad de planeta
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Ownership'
+      responses:
+        "201":
+          description: Propiedad asignada
+
+components:
+  schemas:
+
+    User:
+      type: object
+      required:
+        - name
+        - email
+        - document
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        email:
+          type: string
+        document:
+          type: string
+
+    Planet:
+      type: object
+      required:
+        - name
+        - galaxy
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        galaxy:
+          type: string
+          example: Milky Way
+
+    Ownership:
+      type: object
+      required:
+        - userId
+        - planetId
+        - percentage
+      properties:
+        userId:
+          type: integer
+        planetId:
+          type: integer
+        percentage:
+          type: integer
+          minimum: 30
+          maximum: 100
