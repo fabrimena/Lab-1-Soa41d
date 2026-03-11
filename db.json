@@ -1,0 +1,60 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Luke Skywalker",
+      "email": "luke@rebels.com",
+      "document": "12345"
+    },
+    {
+      "id": "2",
+      "name": "Leia Organa",
+      "email": "leia@rebels.com",
+      "document": "67890"
+    },
+    {
+      "id": "3",
+      "name": "Han Solo",
+      "email": "han@rebels.com",
+      "document": "11111"
+    },
+    {
+      "id": "d4fb",
+      "name": "Pepe Aguilar",
+      "email": "pepeaguilar@example.com",
+      "document": "912842"
+    }
+  ],
+  "planets": [
+    {
+      "id": "1",
+      "name": "Tatooine",
+      "galaxy": "Milky Way"
+    },
+    {
+      "id": "2",
+      "name": "Alderaan",
+      "galaxy": "Milky Way"
+    }
+  ],
+  "ownership": [
+    {
+      "id": "1",
+      "userId": 1,
+      "planetId": 1,
+      "percentage": 50
+    },
+    {
+      "id": "2",
+      "userId": 2,
+      "planetId": 1,
+      "percentage": 50
+    },
+    {
+      "id": "3",
+      "userId": 3,
+      "planetId": 2,
+      "percentage": 100
+    }
+  ]
+}
